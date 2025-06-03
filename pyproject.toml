@@ -1,0 +1,23 @@
+[build-system]
+requires = [
+    'meson-python>=0.15',  # PEP 517 backend
+    'meson>=1.4',          # the build tool itself
+    'ninja'                # Meson’s default backend
+]
+build-backend = 'mesonpy'
+
+[project]
+name = 'mytool'
+requires-python = '>=3.8'
+license = 'GPL-3.0-or-later'
+dynamic = ['version']
+
+[project.scripts]
+mytool = 'mytool._runner:main'
+
+[tool.cibuildwheel]
+build = 'cp313-*'
+skip  = ['pp*']  # skip pypy build
+
+[tool.meson-python.args]
+setup = ["-Dwheel=true"]
