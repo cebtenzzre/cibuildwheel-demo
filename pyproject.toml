@@ -17,3 +17,6 @@ mytool = 'mytool._runner:main'
 
 [tool.cibuildwheel]
 build = 'cp313-*'
+
+[tool.meson-python.args]
+setup = ["-Dwheel=true"]
