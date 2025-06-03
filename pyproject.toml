@@ -13,7 +13,7 @@ license = 'GPL-3.0-or-later'
 dynamic = ['version']
 
 [project.scripts]
-mytool = 'mytool._runner:main'
+mytool = 'mytool:main'
 
 [tool.cibuildwheel]
 build = 'cp313-*'

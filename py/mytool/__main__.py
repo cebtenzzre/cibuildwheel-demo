@@ -1,4 +1,4 @@
-from mytool._runner import main
+from mytool import main
 
 if __name__ == '__main__':
     main()
