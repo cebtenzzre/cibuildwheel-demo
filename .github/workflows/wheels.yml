@@ -21,6 +21,8 @@ jobs:
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
+        env:
+           CIBW_MESON_ARGS: '-Dwheel=true -Dwheel_tag=py3-none-${CIBW_PLATFORM}'
 
       - uses: actions/upload-artifact@v4
         with:

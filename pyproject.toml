@@ -17,7 +17,3 @@ mytool = 'mytool._runner:main'
 
 [tool.cibuildwheel]
 build = 'cp313-*'
-skip  = ['pp*']  # skip pypy build
-
-[tool.meson-python.args]
-setup = ["-Dwheel=true"]
