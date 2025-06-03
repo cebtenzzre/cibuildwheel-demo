@@ -19,4 +19,4 @@ mytool = 'mytool:main'
 build = 'cp313-*'
 
 [tool.meson-python.args]
-setup = ["-Dwheel=true"]
+setup = ['-Dwheel=true']
